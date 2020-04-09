@@ -76,9 +76,10 @@ body{
         flex-wrap: wrap;
         justify-content: space-around;
         li.menu-item{
-          padding: 30px 46px;
+          padding: 30px 40px;
+          width: 20%;
           display: flex;
-          align-items: center;
+          justify-content: center;
           border-right: 1px dashed #ccc;
           transition: .4s;
           border-bottom: 2px solid transparent;
@@ -114,6 +115,7 @@ body{
     .content_wrap{
       background: #fff;
       .content-dev{
+        padding: 25px 20px;
         h2{
           margin-top: 0;
           margin-bottom: 30px;
@@ -121,6 +123,16 @@ body{
           font-weight: 600;
           color: #243c4f;
           word-break: break-word;
+          font-size: 18px;
+        }
+        .text-description{
+          margin-bottom: 25px;
+          p{
+            font-size: 14px;
+            line-height: 24px;
+            color: #7f7f7f;
+            font-weight: 400;
+          }
         }
       }
       .content-info{
@@ -210,6 +222,67 @@ body{
       }
     }
     .content-portfolio{
+      background: #fff;
+      .content-product{
+        padding: 25px 20px;
+        .product-item{
+          width: 100%;
+          margin-bottom: 30px;
+          position: relative;
+          overflow: hidden;
+          .product-image{
+            width: 100%;
+          }
+          .product-content{
+            opacity: 0;
+            transition: all 0.5s ease;
+            position: absolute;
+            color: #fff;
+            padding: 0px 25px 25px 25px ;
+            width: 100%;
+            height: 100%;
+            padding-top: 40%;
+            h3{
+              font-size: 17px;
+              margin-bottom: 4px;
+              color: #fff;
+              font-weight: 500;
+            }
+            span{
+              font-size: 12px;
+              text-decoration: none;
+              cursor: text;
+              color: #c1c1c1;
+            }
+            a{
+              margin: 0 auto;
+              text-align: center;
+              display: inline-block;
+              width: 45px;
+              height: 45px;
+              padding-top: 10px;
+              margin-top: 15px;
+              margin-right: 7px;
+              transition: all 0.5s ease;
+              transform: translateY(200px);
+              color: #fff ;
+              border: solid 1px #a5a5a5;
+            }
+            &:hover{
+              background: rgba(0, 0, 0, 0.63);
+              opacity: 1;
+              a{
+                transform: translateY(0px);
+              }
+              a.search{
+                transition-duration: 0.6s;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content-blog{
       background: #fff;
     }
   }
