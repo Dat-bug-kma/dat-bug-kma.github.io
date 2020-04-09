@@ -1,0 +1,165 @@
+.page-wrapper{
+  .react-datepicker-popper{
+    margin: 0!important;
+    transform: none!important;
+    @include breakpoint(max-sm){
+      position: fixed!important;
+      top: 0!important;
+      left: 0!important;
+      right: 0!important;
+      bottom: 0!important;
+      z-index: 150;
+      overflow: hidden;
+    }
+    @include breakpoint(md){
+      top: 100%!important;
+      z-index: 99;
+    }
+  }
+  .date-input{
+    &__out{
+      .react-datepicker-popper{
+        @include breakpoint(md){
+          left: auto!important;
+          right: 0!important;
+        }
+      }
+    }
+  }
+  .react-datepicker{
+    font-family: "Open Sans";
+    color: $text-color;
+    border: none;
+    @include breakpoint(max-sm){
+      border-radius:0;
+      display: block;
+      height: 100vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    @include breakpoint(md){
+      display: flex;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.14);
+      border-radius: 6px;
+    }
+  }
+  .react-datepicker__month-container{
+    @include breakpoint(max-sm){
+      float: none;
+      border-bottom: 1px solid #eee;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+  .react-datepicker__triangle{
+    display: none;
+  }
+  .react-datepicker__header{
+    background-color: #fff;
+    @include breakpoint(max-sm){
+      border-bottom:none;
+      border-top-left-radius:0;
+      border-top-right-radius:0;
+      padding-top: 15px;
+    }
+    @include breakpoint(md){
+      border-bottom: 1px solid #eee;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+  }
+  .react-datepicker__current-month,
+  .react-datepicker-time__header,
+  .react-datepicker-year-header{
+    color: $text-color;
+    font-weight: $semibold;
+    font-size: 1rem;
+  }
+  .react-datepicker__day-name,
+  .react-datepicker__day,
+  .react-datepicker__time-name{
+    color: $text-color;
+    @include breakpoint(max-sm){
+      width: 2.8rem;
+      line-height: 2.8rem;
+    }
+    @include breakpoint(md){
+      width: 2rem;
+      line-height: 2rem;
+    }
+  }
+
+  .react-datepicker__day--disabled,
+  .react-datepicker__month-text--disabled,
+  .react-datepicker__quarter-text--disabled{
+    color: $text-color;
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--in-selecting-range,
+  .react-datepicker__day--in-range,
+  .react-datepicker__month-text--selected,
+  .react-datepicker__month-text--in-selecting-range,
+  .react-datepicker__month-text--in-range,
+  .react-datepicker__quarter-text--selected,
+  .react-datepicker__quarter-text--in-selecting-range,
+  .react-datepicker__quarter-text--in-range{
+    border-radius: 50%;
+    background-color: $yellow-2;
+    color: $text-color;
+  }
+  .react-datepicker__day:hover,
+  .react-datepicker__month-text:hover,
+  .react-datepicker__quarter-text:hover{
+    border-radius: 50%;
+    background-color: #f2f2f2;
+  }
+  .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle,
+  .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before{
+    border-bottom-color:#fff;
+  }
+  .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before{
+    border-bottom-color:#eee;
+  }
+  .react-datepicker__day--selected:hover,
+  .react-datepicker__day--in-selecting-range:hover,
+  .react-datepicker__day--in-range:hover,
+  .react-datepicker__month-text--selected:hover,
+  .react-datepicker__month-text--in-selecting-range:hover,
+  .react-datepicker__month-text--in-range:hover,
+  .react-datepicker__quarter-text--selected:hover,
+  .react-datepicker__quarter-text--in-selecting-range:hover,
+  .react-datepicker__quarter-text--in-range:hover{
+    background-color: $yellow-2;
+  }
+  .react-datepicker__day:hover,
+  .react-datepicker__month-text:hover,
+  .react-datepicker__quarter-text:hover{
+    border-radius: 50%;
+  }
+  .react-datepicker__month{
+    margin: 0;
+    padding: 0.4rem;
+    @include breakpoint(md){
+      border-right: 1px solid #eee;
+      &:last-child{
+        border-right: none;
+      }
+    }
+  }
+  .react-datepicker__day--today,
+  .react-datepicker__month-text--today,
+  .react-datepicker__quarter-text--today{
+    font-weight: $regular;
+    border: 1px solid $yellow-2;
+    border-radius: 50%;
+  }
+  .react-datepicker__navigation{
+    @include breakpoint(max-sm){
+      top: 20px;
+    }
+  }
+}

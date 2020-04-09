@@ -1,0 +1,216 @@
+
+body{
+  background: #eaeaea!important;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.page-wraper{
+  margin-top: 50px;
+  .profile{
+    overflow: hidden;
+    background: #ffffff;
+    text-align: center;
+    .profile-image{
+      margin-bottom: 20px;
+      .avatar{
+        img{
+          width: 100%;
+          height: 357px;
+          object-fit: cover;
+        }
+      }
+    }
+    .profile-info{
+      .name-job{
+        border-bottom: 1px dashed  #ccc;
+        padding-bottom: 20px;
+        .name {
+          font-size: 20px;
+          color: #333;
+          font-weight: $bold;
+          text-transform: uppercase;
+        }
+        .job{
+          color: #7f7f7f;
+          font-weight: 400;
+          line-height: 30px;
+          font-size: 16px;
+        }
+      }
+      .social-icons{
+        margin: 20px 0px;
+        .social-icons-item{
+          font-size: 12px;
+          color: #2a2a2a;
+          border: solid 1px #2a2a2a;
+          border-radius: 50px;
+          width: 34px;
+          height: 34px;
+          display: inline-block;
+          padding: 4px 0;
+          line-height: 27px;
+          margin: 3px 4px;
+          text-align: center;
+          transition: 0.8s;
+        }
+      }
+    }
+  }
+  .content{
+    .page-title{
+      padding: 25px 20px;
+      border-bottom: 1px dashed #ccc;
+      h2{
+        color: #243c4f;
+        font-size: 18px;
+      }
+    }
+    .menu-header{
+      background: #fff;
+      overflow: hidden;
+      margin-bottom: 50px;
+      .menu-content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        li.menu-item{
+          padding: 30px 46px;
+          display: flex;
+          align-items: center;
+          border-right: 1px dashed #ccc;
+          transition: .4s;
+          border-bottom: 2px solid transparent;
+          &:last-child{
+            border-right: 1px dashed transparent;
+          }
+          .fa{margin-right: 10px}
+          span{
+            line-height: 18px;
+            font-weight: 600;
+            font-style: normal;
+            color: #243c4f;
+            font-size: 13px;
+            text-transform: uppercase;
+          }
+          &.active{
+            border-bottom: 2px solid $yellow-1;
+            color: $yellow-1;
+            span{
+              color: $yellow-1;
+            }
+          }
+          &:hover{
+            border-bottom: 2px solid $yellow-1;
+            color: $yellow-1;
+            span{
+              color: $yellow-1;
+            }
+          }
+        }
+      }
+    }
+    .content_wrap{
+      background: #fff;
+      .content-dev{
+        h2{
+          margin-top: 0;
+          margin-bottom: 30px;
+          font-family: 'Lato', sans-serif;
+          font-weight: 600;
+          color: #243c4f;
+          word-break: break-word;
+        }
+      }
+      .content-info{
+        padding: 25px 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap:wrap ;
+        .info-item{
+          width: 33.33%;
+          padding: 10px;
+          font-size: 14px;
+          color: #333;
+          span{
+            color: #7f7f7f;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .content-resume{
+      background: #fff;
+      .content-experience{
+        padding: 25px 20px;
+        .resume-title{
+          display: flex;
+          justify-items: center;
+          h2{
+            line-height: 55px;
+            color: #243c4f;
+            font-size: 20px;
+          }
+          .fa{
+            margin-right: 10px;
+            width: 55px;
+            height: 55px;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 15px;
+            color: #fff;
+            border-radius: 50px;
+            background: #243c4f;
+          }
+        }
+        .resume-out{
+          padding-left: 25px;
+          .resume-info{
+            border-left: 2px solid #e5e5e5;
+            padding: 0 0 40px 30px;
+            &:first-child{
+              padding-top: 50px;
+            }
+            &:last-child{
+              border: 2px solid transparent;
+            }
+            .info-title{
+              font-weight: 600;
+              font-size: 16px;
+              padding: 0;
+              margin: 0;
+              color: #333;
+              &::after{
+                content: '';
+                width: 10px;
+                height: 10px;
+                float: left;
+                border-radius: 50px;
+                margin: 0px 9px 0 -36px;
+                background: #243c4f;
+              }
+            }
+            .info-date{
+              font-size: 14px;
+              padding: 6px 0;
+              display: block;
+              color: #243c4f;
+            }
+            ul{
+              li{
+                color: #7f7f7f;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content-portfolio{
+      background: #fff;
+    }
+  }
+}
