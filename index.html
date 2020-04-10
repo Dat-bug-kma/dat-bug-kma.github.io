@@ -266,35 +266,37 @@
     <script src="/js/isotope.pkgd.min.js"></script>
     <script src="/js/imagesloaded.pkgd.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script>
-      window.fbAsyncInit = function () {
-          FB.init({
-              xfbml: true,
-              version: 'v6.0'
-          });
-      };
-      (function (d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-          fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <script src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;autoLogAppEvents=1&amp;version=v6.0&amp;appId=235621177490037"></script>
-    <script>
-      $('.menu-header ul.menu-content li').click(function (event) {
-          event.preventDefault();
-          $('.menu-header ul.menu-content li').removeClass('active');
-          $(this).addClass('active');
-          var id = $(this).attr('data-option');
-          console.log(id);
-          $('.tab-content').hide();
-          $('#' + id).show();
-          $('#' + id).addClass('hienlen');
-      
-      });
-    </script>
   </body>
+  <script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v6.0'
+        });
+    };
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    script(src='https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&autoLogAppEvents=1&version=v6.0&appId=235621177490037')
+    
+    
+    
+    script.
+        $('.menu-header ul.menu-content li').click(function (event) {
+            event.preventDefault();
+            $('.menu-header ul.menu-content li').removeClass('active');
+            $(this).addClass('active');
+            var id = $(this).attr('data-option');
+            console.log(id);
+            $('.tab-content').hide();
+            $('#' + id).show();
+            $('#' + id).addClass('hienlen');
+    
+        });
+  </script>
 </html>
