@@ -259,12 +259,29 @@
         </div>
       </div>
     </div>
+    <div attribution="setup_tool" page_id="292048004533310" logged_in_greeting="Hi! How can i help you?" logged_out_greeting="Hi! How can i help you?" class="fb-customerchat"></div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/isotope.pkgd.min.js"></script>
     <script src="/js/imagesloaded.pkgd.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script>
+      window.fbAsyncInit = function () {
+          FB.init({
+              xfbml: true,
+              version: 'v6.0'
+          });
+      };
+      (function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <script src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;autoLogAppEvents=1&amp;version=v6.0&amp;appId=235621177490037"></script>
     <script>
       $('.menu-header ul.menu-content li').click(function (event) {

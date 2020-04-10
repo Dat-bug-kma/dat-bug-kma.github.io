@@ -211,7 +211,6 @@ html(lang="vi")
                                                             i.fa.fa-search
                                                     img.product-image(src='http://demo.spyropress.com/themeforest/picard/wp-content/uploads/2017/08/work-8-370x370.jpg')
                                     .fb-comments(data-href='https://dat-bug-kma.github.io/', data-width='576', data-numposts='10')
-
                                 .content-blog.d-none.tab-content#blog
                                     .error-404
                                         svg.error-404__svg(viewBox='0 0 541.17206 328.45184', height='328.45184', width='541.17206', version='1.1')
@@ -262,6 +261,7 @@ html(lang="vi")
 
 
 
+        .fb-customerchat(attribution='setup_tool', page_id='292048004533310', logged_in_greeting='Hi! How can i help you?', logged_out_greeting='Hi! How can i help you?')
         include jades/footer.jade
         script(src='js/jquery-3.3.1.min.js')
         script(src='js/popper.min.js')
@@ -269,6 +269,21 @@ html(lang="vi")
         script(src='/js/isotope.pkgd.min.js')
         script(src='/js/imagesloaded.pkgd.min.js')
         script(src='/js/bootstrap.min.js')
+        script.
+            window.fbAsyncInit = function () {
+                FB.init({
+                    xfbml: true,
+                    version: 'v6.0'
+                });
+            };
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         script(src='https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&autoLogAppEvents=1&version=v6.0&appId=235621177490037')
 
 
